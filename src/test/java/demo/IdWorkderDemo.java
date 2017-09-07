@@ -26,5 +26,8 @@ public class IdWorkderDemo {
         System.out.println(nextId);
         long time = iw.getIdTimestamp(nextId);
         System.out.println(time+" -> "+new SimpleDateFormat("yyyyMMddHHmmss").format(new Date(time)));
+
+        long l = -1L ^ (-1L << 12L);
+        System.out.println(idepo);
     }
 }

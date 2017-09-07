@@ -34,14 +34,14 @@ public class IdWorker {
 
     private static final long workerIdBits = 5L;
     private static final long datacenterIdBits = 5L;
-    private static final long maxWorkerId = -1L ^ (-1L << workerIdBits);
-    private static final long maxDatacenterId = -1L ^ (-1L << datacenterIdBits);
+    private static final long maxWorkerId = 31l;
+    private static final long maxDatacenterId = 31L;
 
     private static final long sequenceBits = 12L;
-    private static final long workerIdShift = sequenceBits;
-    private static final long datacenterIdShift = sequenceBits + workerIdBits;
-    private static final long timestampLeftShift = sequenceBits + workerIdBits + datacenterIdBits;
-    private static final long sequenceMask = -1L ^ (-1L << sequenceBits);
+    private static final long workerIdShift = 12L;
+    private static final long datacenterIdShift = 17L;
+    private static final long timestampLeftShift = 22;
+    private static final long sequenceMask = 4095;
 
     private long lastTimestamp = -1L;
     private long sequence;
