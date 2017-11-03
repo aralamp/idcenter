@@ -17,7 +17,7 @@ public class IdWorkderDemo {
         final long idepo = System.currentTimeMillis() - 3600 * 1000L;
         IdWorker iw = new IdWorker(1, 1, 0, idepo);
         IdWorker iw2 = new IdWorker(idepo);
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 200; i++) {
             System.out.println(iw.getId() + " -> " + iw2.getId());
         }
         System.out.println(iw);
