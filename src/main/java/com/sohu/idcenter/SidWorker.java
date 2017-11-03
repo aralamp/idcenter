@@ -12,7 +12,7 @@ import java.util.Date;
 public class SidWorker {
 
     private static long lastTimestamp = -1L;
-    private static int sequence = 0;
+    private static int sequence = 110;
     private static final long MAX_SEQUENCE = 100;
     private static final SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmssSSS");
 
