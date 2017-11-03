@@ -17,7 +17,7 @@ public class IdWorkderDemo {
         final long idepo = System.currentTimeMillis() - 3600 * 1000L;
         IdWorker iw = new IdWorker(1, 1, 0, idepo);
         IdWorker iw2 = new IdWorker(idepo);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             System.out.println(iw.getId() + " -> " + iw2.getId());
         }
         System.out.println(iw);
@@ -27,7 +27,7 @@ public class IdWorkderDemo {
         long time = iw.getIdTimestamp(nextId);
         System.out.println(time+" -> "+new SimpleDateFormat("yyyyMMddHHmmss").format(new Date(time)));
 
-        long l = -1L ^ (-1L << 121L);
+        long l = -1L ^ (-1L << 12L);
         System.out.println(idepo);
     }
 }
